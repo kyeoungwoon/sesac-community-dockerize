@@ -1,0 +1,150 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); /* 구글 CDN 폰트 불러오기 */
+
+main {
+  max-width: 720px;
+  padding: 20px;
+  margin: 0 auto; /* 전체 내용을 중간(center)에 두기 */
+  font-family: "Noto Sans KR";
+}
+
+header {
+  align-items: center; /* 텍스트 세로 정렬 */
+  display: flex; /* 로고, 검색창, 로그인 및 회원가입 요소들을 옆으로 나란히 */
+  justify-content: space-between; /* 왼쪽 끝에서 오른쪽 끝까지 균일하게 놓기 */
+  margin-bottom: 30px;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+header a {
+  text-decoration: none; /* 텍스트에서 밑줄 제거 */
+}
+
+header a.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.search-input {
+  border: 2px solid #ddd; /* 테두리 색상 설정 */
+  border-radius: 5px; /* 테두리 모서리를 둥글게 */
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+img {
+  max-width: 100%; /* 이미지가 공간을 벗어나지 못하도록 */
+}
+
+div.post {
+  display: grid; /* 이미지와 텍스트를 옆으로 나란히 나열 */
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+div.post div.texts h2 {
+  margin: 0; /* 텍스트 위쪽 여백을 제거 */
+  font-size: 18px;
+}
+
+div.post p.info {
+  margin: 6px 0px; /* 왼쪽으로 붙이기 */
+  color: #777;
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+}
+
+div.post p.info a.author {
+  color: #222;
+}
+
+div.post p.summary {
+  margin: 6px 0px; /* 왼쪽으로 붙이기 */
+}
+
+form.login,
+form.register {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+input {
+  display: block; /* 한 줄씩 내용이 들어가도록 */
+  width: 100%;
+  border: 2px solid #ddd; /* 테두리 색상 설정 */
+  border-radius: 5px; /* 테두리 모서리를 둥글게 */
+  padding: 8px;
+  margin-bottom: 5px; /* 아래 input 요소와 간격 유지 */
+}
+
+button {
+  background-color: #fff;
+  border: 2px solid #888; /* 테두리 색상 설정 */
+  border-radius: 5px; /* 테두리 모서리를 둥글게 */
+}
+
+header a {
+  text-decoration: none; /* 텍스트에서 밑줄 제거 */
+  color: inherit;
+}
+
+div.post div.texts a {
+  text-decoration: none;
+  color: inherit;
+}
+
+div.single-post div.image {
+  max-height: 200px;
+  display: flex;
+  overflow: hidden;
+}
+
+div.single-post div.image img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+div.single-post h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+div.single-post time {
+  text-align: center;
+  display: block;
+  color: #aaa;
+}
+
+div.single-post div.author {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.single-post div.content {
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 560px) {
+  main {
+    font-size: 12px;
+  }
+  header {
+    font-size: 12px;
+  }
+  header a.logo {
+    font-size: 14px;
+  }
+  .search-input {
+    width: 130px;
+  }
+  div.post {
+    grid-template-columns: 1fr;
+  }
+}
